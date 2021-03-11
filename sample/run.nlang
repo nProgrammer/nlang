@@ -1,0 +1,13 @@
+log "hi121233";
+log "ccc";
+add 1 to 2;
+add 3 to 100;
+add 1 to 1;
+subtract 10 from 2;
+multiply 10 by 2;
+divide 6 by 2;
+a <-STRING- "HI";
+log "Hello";
+log %;a;
+b <-STRING- "10";
+add %;b to 1
