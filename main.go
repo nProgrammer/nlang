@@ -20,15 +20,14 @@ func main() {
 		if code[i] == "log" {
 			commands.Log(code[i+1])
 			i += 2
-			//fmt.Println(i, code[i])
 		} else if code[i] == "add" {
 			commands.Add(code[i+1], code[i+2], code[i+3])
+			i++
+		} else if code[i] == "wait" {
+			commands.Wait(code[i+1])
 			i++
 		} else {
 			i++
 		}
 	}
-	//if code[0] == "log" {
-	//	commands.Log(code[1])
-	//}
 }
