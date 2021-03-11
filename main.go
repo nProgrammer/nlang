@@ -26,6 +26,15 @@ func main() {
 		} else if code[i] == "wait" {
 			commands.Wait(code[i+1])
 			i++
+		} else if code[i] == "subtract" {
+			commands.Subtract(code[i+1], code[i+2], code[i+3])
+			i++
+		} else if code[i] == "multiply" {
+			commands.Multiply(code[i+1], code[i+2], code[i+3])
+			i++
+		} else if code[i] == "divide" {
+			commands.Divide(code[i+1], code[i+2], code[i+3])
+			i++
 		} else {
 			i++
 		}
