@@ -38,18 +38,34 @@ func main() {
 			}
 			i++
 		} else if code[i] == "wait" {
-			commands.Wait(code[i+1])
+			if code[i+2] == "%" {
+				commandsForVars.Wait(code[i+2])
+			} else {
+				commands.Wait(code[i+1])
+			}
 			i++
 		} else if code[i] == "subtract" {
-			commands.Subtract(code[i+1], code[i+2], code[i+3])
+			if code[i+2] == "%" {
+				commandsForVars.Subtract(code[i+2], code[i+3], code[i+4])
+			} else {
+				commands.Subtract(code[i+1], code[i+2], code[i+3])
+			}
 			i++
 		} else if code[i] == "multiply" {
-			commands.Multiply(code[i+1], code[i+2], code[i+3])
+			if code[i+1] == "%" {
+				commandsForVars.Multiply(code[i+2], code[i+3], code[i+4])
+			} else {
+				commands.Multiply(code[i+1], code[i+2], code[i+3])
+			}
 			i++
 		} else if code[i] == "divide" {
-			commands.Divide(code[i+1], code[i+2], code[i+3])
+			if code[i+1] == "%" {
+				commandsForVars.Divide(code[i+2], code[i+3], code[i+4])
+			} else {
+				commands.Divide(code[i+1], code[i+2], code[i+3])
+			}
 			i++
-		} else if code[i+1] == "<-STRING-" {
+		} else if code[i+1] == "<-" {
 			vars.VariableString(code[i], code[i+2])
 			i += 2
 		} else {

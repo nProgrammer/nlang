@@ -6,8 +6,12 @@ add 1 to 1;
 subtract 10 from 2;
 multiply 10 by 2;
 divide 6 by 2;
-a <-STRING- "HI";
+a <- "HI";
 log "Hello";
 log %;a;
-b <-STRING- "10";
-add %;b to 1
+b <- "10";
+add %;b to 1;
+a <- "3";
+multiply %;a by 2;
+#log "A"; THATS HOW COMMENT WORKS;
+log "TESTAFTERCOMMENT";
